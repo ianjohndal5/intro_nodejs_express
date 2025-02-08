@@ -24,12 +24,11 @@ app.get('/about', (req, res) => {
     res.send('About Us');
 });
 
-// Endpoint to get items
+
 app.get('/items', (req, res) => {
     res.json(items);
 });
 
-// Endpoint to add an item (changed to POST)
 app.post('/items', (req, res) => {
     const newItem = req.body.item;
     if (newItem) {
